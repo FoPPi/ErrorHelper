@@ -25,8 +25,8 @@
 
 ## Known Issues
 
-Please check the [GitHub Issues](https://github.com/FoPPi/error-helper/issues) for known issues and report any new ones you come across.
+Please check the [GitHub Issues](https://github.com/FoPPi/ErrorHelper/issues) for known issues and report any new ones you come across.
 
 ## Contribute
 
-If you would like to contribute to this project or have ideas for improvements, please check our [GitHub repository](https://github.com/FoPPi/error-helper) for guidelines on contributing and open issues or pull requests.
+If you would like to contribute to this project or have ideas for improvements, please check our [GitHub repository](https://github.com/FoPPi/ErrorHelper) for guidelines on contributing and open issues or pull requests.
