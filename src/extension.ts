@@ -1,7 +1,11 @@
 import * as vscode from 'vscode';
 import axios from 'axios';
+import * as dotenv from 'dotenv';
+import * as path from 'path';
 
 let panel: vscode.WebviewPanel | undefined = undefined;
+
+dotenv.config({ path: path.join(__dirname, '..', '.env') });
 
 function activate(context: vscode.ExtensionContext) {
   const fixCodeLine = vscode.commands.registerCommand('errorhelper.fixCodeLine', async () => {
@@ -11,7 +15,7 @@ function activate(context: vscode.ExtensionContext) {
       const language = editor.document.languageId;
       const codeLine = encodeURIComponent(selectedText);
 
-      const apiUrl = `https://errorhelperfastapi.onrender.com/helper/${language}/${codeLine}`;
+      const apiUrl = `${process.env.SERVER_IP}/helper/${language}/${codeLine}`;
 
       axios.get(apiUrl)
         .then(response => {

@@ -1,8 +1,9 @@
 {
   "name": "errorhelper",
   "displayName": "Error Helper",
-  "description": "Says how to fix code like on rust.",
-  "version": "1.0.0",
+  "description": "Help you to fix code.",
+  "icon": "images/icon.png",
+  "version": "1.1.0",
   "publisher": "FoPPi",
   "repository": "https://github.com/FoPPi/ErrorHelper",
   "engines": {
@@ -57,6 +58,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "axios": "^1.5.1"
+    "axios": "^1.5.1",
+    "dotenv": "^16.3.1"
   }
 }
