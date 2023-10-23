@@ -1,4 +1,8 @@
 # Error Helper - Visual Studio Code Extension
+![Visual Studio Marketplace Version (including pre-releases)](https://img.shields.io/visual-studio-marketplace/v/FoPPi.errorhelper)
+![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/FoPPi.errorhelper)
+![GitHub](https://img.shields.io/github/license/FoPPi/ErrorHelper)
+![GitHub Repo stars](https://img.shields.io/github/stars/FoPPi/ErrorHelper)
 
 **Error Helper** is a Visual Studio Code extension that simplifies the process of fixing code lines in your code editor. It enables you to select a code line, right-click, and choose the "Fix Code Line" option to automatically fix the selected code. Say goodbye to manual corrections and streamline your coding workflow!
 
