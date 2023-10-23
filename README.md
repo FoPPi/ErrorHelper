@@ -23,6 +23,8 @@
 3. Search for "Error Helper" in the Extensions marketplace.
 4. Click the "Install" button for the "Error Helper" extension.
 
+or by link [Marketplace](https://marketplace.visualstudio.com/items?itemName=FoPPi.errorhelper)
+
 ## Usage
 
 1. Select a code line in your code editor.
