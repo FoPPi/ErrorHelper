@@ -1,6 +1,7 @@
 # Error Helper - Visual Studio Code Extension
 ![Visual Studio Marketplace Version (including pre-releases)](https://img.shields.io/visual-studio-marketplace/v/FoPPi.errorhelper)
 ![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/FoPPi.errorhelper)
+![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/FoPPi.errorhelper)
 ![GitHub](https://img.shields.io/github/license/FoPPi/ErrorHelper)
 ![GitHub Repo stars](https://img.shields.io/github/stars/FoPPi/ErrorHelper)
 
