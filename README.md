@@ -1,4 +1,8 @@
-# Error Helper - Visual Studio Code Extension
+<div aling=center>
+<img src="https://i.ibb.co/J7m7qpQ/IMG-20231025-135359-087.png" alt="img">
+<h1>Error Helper - Visual Studio Code Extension</h1>
+</div>
+
 ![Visual Studio Marketplace Version (including pre-releases)](https://img.shields.io/visual-studio-marketplace/v/FoPPi.errorhelper)
 ![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/FoPPi.errorhelper)
 ![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/FoPPi.errorhelper)
