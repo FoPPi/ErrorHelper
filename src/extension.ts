@@ -52,13 +52,55 @@ function activate(context: vscode.ExtensionContext) {
         vscode.window.showErrorMessage(error.message);
       });
     }
+    else{
+      vscode.window.showErrorMessage("Select code line");
+    }
+  });
+
+  const openResponseWebView = vscode.commands.registerCommand('errorhelper.openResponseWebView', () => {
+    const editor = vscode.window.activeTextEditor;
+    if (editor && editor.selection) {
+      const selectedText = editor.document.getText(editor.selection);
+      const language = editor.document.languageId;
+      const codeLine = encodeURIComponent(selectedText);
+
+      const apiUrl = `${process.env.SERVER_IP}/helper/${language}/${codeLine}`;
+
+      axios.get(apiUrl)
+        .then(response => {
+        const replacementText = response.data.response;
+        if (panel) {
+          panel.title = 'AI Response';
+          panel.webview.html = getWebviewContent(replacementText, response.data.full_response);
+        } else {
+          panel = vscode.window.createWebviewPanel(
+            'errorhelperWebview',
+            'AI Response',
+            vscode.ViewColumn.One,
+             {}
+          );
+
+          panel.webview.html = getWebviewContent(replacementText, response.data.full_response);
+
+          panel.onDidDispose(() => {
+            panel = undefined;
+          });
+        }
+      })
+      .catch(error => {
+        vscode.window.showErrorMessage(error.message);
+      });
+    }
+    else{
+      vscode.window.showErrorMessage("Select code line");
+    }
   });
 
   context.subscriptions.push(fixCodeLine);
+  context.subscriptions.push(openResponseWebView);
 }
 
 function getWebviewContent(replacementText: string, fullResponse: string): string {
-
   return `
     <html>
     <head>
@@ -70,7 +112,8 @@ function getWebviewContent(replacementText: string, fullResponse: string): strin
           font-size: 20px;
         }
         pre {
-          background-color: #181818;
+          font-family: Arial, sans-serif;
+          font-size: 16px;
           padding: 10px;
           border: 1px solid #0078d4;
           border-radius: 5px;
@@ -79,10 +122,10 @@ function getWebviewContent(replacementText: string, fullResponse: string): strin
         }
       </style>
     </head>
-    <body>
+    <body markdown="block">
       <h1>AI Response</h1>
       <pre>${replacementText}</pre>
-      <p><strong>Full AI Response:</strong></p>
+      <h2>Full AI Response:</h1>
       <pre>${fullResponse}</pre>
     </body>
     </html>

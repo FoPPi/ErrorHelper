@@ -1,5 +1,5 @@
 <div align=center>
-   <img width=150 src=https://i.ibb.co/J7m7qpQ/IMG-20231025-135359-087.png alt='logo' />
+   <img width=250 src=https://i.ibb.co/J7m7qpQ/IMG-20231025-135359-087.png alt='logo' />
    <h1>Error Helper - Visual Studio Code Extension</h1>
 </div>
 

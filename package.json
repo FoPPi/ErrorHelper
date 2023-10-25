@@ -3,7 +3,7 @@
   "displayName": "Error Helper",
   "description": "Help you to fix code.",
   "icon": "images/icon.png",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "publisher": "FoPPi",
   "repository": "https://github.com/FoPPi/ErrorHelper",
   "engines": {
@@ -19,12 +19,21 @@
       {
         "command": "errorhelper.fixCodeLine",
         "title": "Fix Code Line"
+      },
+      {
+        "command": "errorhelper.openResponseWebView",
+        "title": "Open fix in new tab"
       }
     ],
     "menus": {
       "editor/context": [
         {
           "command": "errorhelper.fixCodeLine",
+          "group": "1_modification",
+          "when": "editorHasSelection && !editorReadonly"
+        },
+        {
+          "command": "errorhelper.openResponseWebView",
           "group": "1_modification",
           "when": "editorHasSelection && !editorReadonly"
         }
